@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습서울페이지</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "맑은 고딕", sans-serif;
+      }
+      section.firstline {
+        width: 886px;
+        margin: 0 auto;
+      }
+      section.firstline > div {
+        width: 200px;
+        height: 200px;
+        border: 1px solid;
+        padding: 30px 40px;
+        position: relative;
+        float: left;
+        margin-right: 20px;
+      }
+      section.firstline > div:last-child {
+        margin-right: 0;
+      }
+      section.firstline > div > h1 {
+        font-size: 22px;
+      }
+      section.firstline > div > h2 {
+        font-size: 14px;
+        margin-top: 5px;
+        font-weight: normal;
+      }
+      section.firstline > div > p {
+        width: 200px;
+        position: absolute;
+        bottom: 30px;
+        text-align: center;
+      }
+      section.firstline > div p.handup {
+        bottom: 0;
+        height: 102px;
+      }
+      section.second > section.second > div > h1 {
+        font-size: 22px;
+      }
+      section.second > div.citi2 {
+        width: 428px;
+        height: 140px;
+        border: 1px solid;
+      }
+      .second {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="firstline">
+      <div class="citizen1">
+        <h1>칭찬합시다</h1>
+        <p>
+          <img src="/Seoul/img_citizen1-1_2023.png" alt="따봉" />
+        </p>
+      </div>
+      <div class="citizen1">
+        <h1>자유게시판</h1>
+        <p>
+          <img src="/Seoul/img_citizen1-2_2023.png" alt="따봉" />
+        </p>
+      </div>
+      <div class="citizen1">
+        <h1>상상대로 서울</h1>
+        <h2>더 나은 일상을 시민과 함께</h2>
+        <p class="handup">
+          <img src="/Seoul/img_citizen1_2023.png" alt="따봉" />
+        </p>
+      </div>
+    </section>
+    <section class="second">
+      <div class="citi2"></div>
+    </section>
+  </body>
+</html>
