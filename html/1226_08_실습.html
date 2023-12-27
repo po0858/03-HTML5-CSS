@@ -23,10 +23,22 @@
         text-align: right;
         margin: 0 auto;
       }
+      .bg {
+        position: absolute;
+        left: 0;
+        width: 100vw;
+        height: 82px;
+        background: url(../images/pattern.gif);
+      }
       .top2 {
+        width: 1000px;
         height: 82px;
         margin: 0 auto;
-        background: url(../images/pattern.gif);
+      }
+      .mid,
+      .bot {
+        position: relative;
+        top: 82px;
       }
       .mid p {
         float: left;
@@ -52,8 +64,10 @@
       <div class="top">
         <p><img src="../images/index_top.gif" /></p>
       </div>
-      <div class="top2">
-        <p><img src="../images/index_pattern.gif" /></p>
+      <div class="bg">
+        <div class="top2">
+          <p><img src="../images/index_pattern.gif" /></p>
+        </div>
       </div>
       <div class="mid">
         <p><img src="../images/index_main_01.gif" /></p>

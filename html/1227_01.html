@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #d3222a;
+      }
+      section {
+        /* width: 1000px;
+        margin: 0 auto; */
+      }
+      .top {
+        width: 1000px;
+        height: 23px;
+        background: #d3222a;
+        text-align: right;
+        margin: 0 auto;
+      }
+      .top_menu {
+        height: 23px;
+        float: right;
+      }
+      .top_menu li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px;
+      }
+      .top_menu li a::after {
+        content: "|";
+        padding: 0 10px;
+      }
+      .top_menu li:last-child a::after {
+        content: "";
+      }
+      .top_menu li {
+        float: left;
+        list-style: none;
+      }
+      .top_menu li a:hover {
+        text-decoration: underline;
+      }
+      .bg {
+        width: 100vw;
+        height: 82px;
+        background: url(../images/pattern.gif);
+      }
+
+      .top2 {
+        width: 1000px;
+        height: 82px;
+        margin: 0 auto;
+      }
+      .mid,
+      .bot {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      .mid {
+        height: 625px;
+        position: relative;
+      }
+      .mid p {
+        float: left;
+        height: 625px;
+      }
+      .left_menu {
+        position: absolute;
+        left: 40px;
+        top: 210px;
+      }
+      .left_menu li {
+        list-style: none;
+      }
+      .left_menu li a {
+        color: #000;
+        text-decoration: none;
+      }
+      .left_menu li a:hover {
+        color: #fff;
+      }
+      .mid h1 {
+        color: #fff;
+        position: absolute;
+        display: inline-block;
+      }
+      .bot {
+        margin: 0 auto;
+        line-height: 100px;
+      }
+      .botbg {
+        clear: both;
+        background: #fff;
+        height: 100px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="top">
+        <!-- <p><img src="../images/index_top.gif" /></p> -->
+        <ul class="top_menu">
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">JAPANESE</a></li>
+          <li><a href="#">CHINESE</a></li>
+          <li><a href="#">ITALIAN</a></li>
+        </ul>
+      </div>
+      <div class="bg">
+        <div class="top2">
+          <p><img src="../images/index_pattern.gif" /></p>
+        </div>
+      </div>
+      <div class="mid">
+        <p><img src="../images/index_main_01.gif" /></p>
+        <ul class="left_menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Instory</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Illustrator</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="midbg">
+          <h1>Home 메인페이지입니다</h1>
+        </div>
+        <p><img src="../images/index_main_02.gif" /></p>
+      </div>
+      <div class="botbg">
+        <div class="bot">
+          <p><img src="../images/copyright.gif" /></p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
