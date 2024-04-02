@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        position: relative;
+        width: 500px;
+        height: 300px;
+      }
+      p img {
+        position: absolute;
+        width: 500px;
+        height: 300px;
+        top: 0;
+        display: none;
+      }
+      label {
+        display: block;
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        width: calc(500px / 6);
+        background: #9cc;
+      }
+      div {
+        width: 500px;
+      }
+      .menu {
+        text-align: center;
+        height: 50px;
+      }
+      label:hover {
+        cursor: pointer;
+        background: #669;
+      }
+      p img.on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        <img src="images/photo1.jpg" alt="photo1" />
+        <img src="images/photo2.jpg" alt="photo2" />
+        <img src="images/photo3.jpg" alt="photo3" />
+        <img src="images/photo4.jpg" alt="photo4" />
+        <img src="images/photo5.jpg" alt="photo5" />
+        <img src="images/photo6.jpg" alt="photo6" />
+      </p>
+      <div class="menu">
+        <label id="one">photo1</label>
+        <label id="two">photo2</label>
+        <label id="three">photo3</label>
+        <label id="four">photo4</label>
+        <label id="five">photo5</label>
+        <label id="six">photo6</label>
+      </div>
+    </div>
+    <script>
+      document.getElementsByTagName("img")[0].classList.add("on");
+      document.getElementsByTagName("label")[0].onclick = function () {
+        let x = document.querySelectorAll("img");
+        x.forEach(function (keys, items) {
+          console.log(keys);
+          keys.classList.remove("on");
+        });
+        document.getElementsByTagName("img")[0].classList.add("on");
+      };
+      document.getElementsByTagName("label")[1].onclick = function () {
+        let x = document.querySelectorAll("img");
+        x.forEach(function (keys, items) {
+          console.log(keys);
+          keys.classList.remove("on");
+        });
+        document.getElementsByTagName("img")[1].classList.add("on");
+      };
+      document.getElementsByTagName("label")[2].onclick = function () {
+        let x = document.querySelectorAll("img");
+        x.forEach(function (keys, items) {
+          console.log(keys);
+          keys.classList.remove("on");
+        });
+        document.getElementsByTagName("img")[2].classList.add("on");
+      };
+      document.getElementsByTagName("label")[3].onclick = function () {
+        let x = document.querySelectorAll("img");
+        x.forEach(function (keys, items) {
+          console.log(keys);
+          keys.classList.remove("on");
+        });
+        document.getElementsByTagName("img")[3].classList.add("on");
+      };
+      document.getElementsByTagName("label")[4].onclick = function () {
+        let x = document.querySelectorAll("img");
+        x.forEach(function (keys, items) {
+          console.log(keys);
+          keys.classList.remove("on");
+        });
+        document.getElementsByTagName("img")[4].classList.add("on");
+      };
+      document.getElementsByTagName("label")[5].onclick = function () {
+        let x = document.querySelectorAll("img");
+        x.forEach(function (keys, items) {
+          console.log(keys);
+          keys.classList.remove("on");
+        });
+        document.getElementsByTagName("img")[5].classList.add("on");
+      };
+    </script>
+  </body>
+</html>

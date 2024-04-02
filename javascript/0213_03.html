@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(typeof fruits + "<br>");
+      document.write(typeof fruits.toString() + "<br>");
+      document.write(fruits.toString() + "<br>");
+      document.write(fruits.toString().length + "<br>");
+      document.write(fruits.length + "<br>");
+      document.write(fruits.join(" * ") + "<br>");
+      document.write(fruits.join(" * ").length + "<br>");
+      fruits.pop();
+      document.write(fruits + "<br>");
+      document.write(`${fruits}<br>`);
+      fruits.push("Kiwi");
+      document.write(`${fruits}<br>`);
+      fruits.shift();
+      document.write(`${fruits}<br>`);
+      fruits.unshift("Lemon");
+      document.write(`${fruits}<br>`);
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+      const myChildren = myGirls.concat(myBoys);
+      document.write(`${myChildren}`);
+      document.write("<br>");
+      document.write("<br>");
+      document.write(`${fruits}<br>`);
+      fruits.splice(2, 0, "Lemon", "Kiwi");
+      document.write(`${fruits}<br>`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+        /* overflow: hidden; */
+      }
+      .boxwrap {
+        display: table;
+        table-layout: fixed;
+        width: 300%;
+        height: 100vh;
+      }
+      section {
+        height: 100vh;
+      }
+      .boxwrap section {
+        display: table-cell;
+      }
+      section:first-child {
+        background: #f00;
+      }
+      section:nth-child(2) {
+        background: #f0f;
+      }
+      section:nth-child(3) {
+        background: #00f;
+      }
+      section:nth-child(4) {
+        background: #90f;
+      }
+      section:nth-child(5) {
+        background: #09f;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let cont = $("section");
+        $(cont).each(function (index, value) {
+          $(this).on("wheel", function () {
+            // console.log(event.wheelDelta);
+            let moveTop = $(window).scrollTop;
+            let contIndex = $(cont).eq(index);
+            if (event.wheelDelta < 0) {
+              moveTop = $(contIndex).next().offset().top;
+              // if ($(contIndex).next() != undefined) {
+              // try {
+
+              // }
+              // catch (err) {}
+              // }
+            } else {
+              moveTop = $(contIndex).prev().offset().top;
+              // if ($(contIndex).prev() != undefined) {
+              // try {
+
+              // }
+              //  catch (err) {}
+              // }
+            }
+            $("html,body")
+              .stop()
+              .animate({ scrollTop: moveTop + "px" }, 500);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section></section>
+    <section></section>
+    <div class="boxwrap">
+      <section></section>
+      <section></section>
+      <section></section>
+    </div>
+    <section></section>
+    <section></section>
+  </body>
+</html>

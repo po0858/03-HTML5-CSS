@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .contents {
+        padding: 50px;
+        text-align: center;
+      }
+      .btn {
+        display: flex;
+      }
+      .btn li {
+        width: 25%;
+        text-align: center;
+        padding: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="contents">
+      <li><h1>content1</h1></li>
+      <li><h1>content2</h1></li>
+      <li><h1>content3</h1></li>
+      <li><h1>content4</h1></li>
+    </ul>
+    <ul class="btn">
+      <li>content1</li>
+      <li>content2</li>
+      <li>content3</li>
+      <li>content4</li>
+    </ul>
+    <script>
+      let bg = ["red", "blue", "green", "yellow"];
+      let conbg = document.getElementsByClassName("contents")[0];
+      let con = document.querySelectorAll(".contents li");
+      let btn = document.querySelectorAll(".btn li");
+      function rst() {
+        con.forEach(function (k, i) {
+          k.style.display = "none";
+          conbg.style.backgroundColor = bg[0];
+        });
+      }
+      rst();
+      con[0].style.display = "block";
+      btn.forEach(function (k, i) {
+        btn[i].style.backgroundColor = bg[i];
+      });
+      btn.forEach(function (k, i) {
+        k.onclick = function () {
+          rst();
+          conbg.style.backgroundColor = bg[i];
+          con[i].style.display = "block";
+        };
+      });
+    </script>
+  </body>
+</html>

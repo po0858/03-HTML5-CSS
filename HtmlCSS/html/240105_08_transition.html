@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li {
+        width: 500px;
+        height: 200px;
+        background: #f0f0f0;
+        text-align: center;
+        position: relative;
+        margin: 50px;
+      }
+      ul li p {
+        position: relative;
+        top: 30px;
+        left: 0;
+        width: 50px;
+        border-bottom: 1px solid;
+        transition: all 0.5s;
+      }
+      ul li:hover p {
+        left: 20px;
+      }
+      ul li p::after {
+        position: absolute;
+        bottom: 7px;
+        right: -2px;
+        content: "";
+        width: 20px;
+        height: 1px;
+        background: #000;
+        transform: rotate(45deg);
+      }
+      ul li .contents {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .line {
+        position: absolute;
+        background: #07348c;
+      }
+      .line-top {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: 50% 0;
+        transition: all 0.5s ease-in-out;
+      }
+      ul li:hover .line-top {
+        transform: scaleX(1);
+        transition: all 0.5s ease-in-out;
+      }
+      .line-right {
+        width: 5px;
+        height: 100%;
+        right: 0;
+        transform: scaleY(0);
+        transform-origin: 0 50%;
+        transition: all 0.5s ease-in-out;
+      }
+      ul li:hover .line-right {
+        transform: scaleY(1);
+        transition: all 0.5s ease-in-out;
+      }
+      .line-bottom {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        bottom: 0;
+        transform: scaleX(0);
+        transform-origin: 50% 0;
+        transition: all 0.5s ease-in-out;
+      }
+      ul li:hover .line-bottom {
+        transform: scaleX(1);
+        transition: all 0.5s ease-in-out;
+      }
+      .line-left {
+        width: 5px;
+        height: 100%;
+        left: 0;
+        transform: scaleY(0);
+        transform-origin: 0 50%;
+        transition: all 0.5s ease-in-out;
+      }
+      ul li:hover .line-left {
+        transform: scaleY(1);
+        transition: all 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div class="contents">
+          <h1>메인배너</h1>
+          <h2>Border Transition</h2>
+          <p></p>
+        </div>
+        <span class="line line-top"></span>
+        <span class="line line-right"></span>
+        <span class="line line-bottom"></span>
+        <span class="line line-left"></span>
+      </li>
+    </ul>
+  </body>
+</html>

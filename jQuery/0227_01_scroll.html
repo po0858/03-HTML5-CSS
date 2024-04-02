@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 3000px;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      document.addEventListener("wheel", function () {
+        let moveTop = document.documentElement.scrollTop;
+        console.log("자바스크립트휠" + event.deltaY);
+        console.log("javascript" + moveTop);
+      });
+      $(function () {
+        $(window).on("wheel", function () {
+          let moveTop = $(this).scrollTop();
+          console.log("제이쿼리휠" + event.wheelDelta);
+          console.log("jQuerymoveTop" + moveTop);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>asd</p>
+  </body>
+</html>

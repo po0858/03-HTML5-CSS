@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      #content {
+        width: 630px;
+        height: 630px;
+        margin: 50px auto;
+      }
+      #clock {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      #clock li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #clock li#base {
+        background: url(images/clock_bg.png);
+      }
+      #clock li#hour {
+        background: url(images/hour.png);
+      }
+      #clock li#minute {
+        background: url(images/minute.png);
+      }
+      #clock li#second {
+        background: url(images/second.png) center/630px 630px;
+      }
+      #clock li#center {
+        background: url(images/center_bg.png);
+      }
+      div.btn {
+        width: 300px;
+        height: 100px;
+        margin: 0 auto;
+      }
+      .btn button {
+        width: calc(50% - 5px);
+        height: 100%;
+      }
+      .btn button:first-child {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <!-- <ul id="clock">
+        <li id="base"></li>
+        <li id="hour"></li>
+        <li id="minute"></li>
+        <li id="second"></li>
+        <li id="center"></li>
+      </ul> -->
+    </div>
+    <div class="btn">
+      <button id="btn1">Start / Stop</button><button id="reset">Reset</button>
+    </div>
+    <script>
+      let now;
+      let set;
+      let sum;
+      let minute;
+      let second;
+      let msecond;
+      let interval;
+      let i = 0;
+      let newtime = 0;
+      let newtimea = 0;
+      setInterval(cons, 1000);
+      function live() {
+        now = new Date();
+        sum = now - set + newtimea;
+        minute = parseInt(sum / 1000 / 60);
+        second = parseInt(sum / 1000);
+        msecond = sum;
+        msecond = msecond >= 1000 ? msecond - second * 1000 : msecond;
+        second = second >= 60 ? second - minute * 60 : second;
+        console.log(`${minute}분 ${second}초 ${msecond}밀리초`);
+      }
+      function cons() {
+        // asd = new Date();
+        // set = set + (asd - now);
+      }
+      document.getElementById("btn1").onclick = function () {
+        switch (i) {
+          case 0:
+            set = new Date();
+            document.getElementById("btn1").innerHTML = "Stop";
+            interval = setInterval(live, 100);
+            i = 1;
+            break;
+          case 1:
+            newtime = new Date();
+            newtimea = newtime - now;
+            document.getElementById("btn1").innerHTML = "Start";
+            clearInterval(interval);
+            i = 2;
+            break;
+          case 2:
+            document.getElementById("btn1").innerHTML = "Stop";
+            interval = setInterval(live, 100);
+            i = 1;
+            break;
+        }
+      };
+      document.getElementById("reset").onclick = function () {
+        i = 0;
+        document.getElementById("btn1").innerHTML = "Start / Stop";
+        clearInterval(interval);
+      };
+      // function clock() {
+      //   let x = new Date();
+      //   let hour = x.getHours();
+      //   let minute = x.getMinutes();
+      //   let second = x.getSeconds();
+      //   hour = hour > 12 ? hour - 12 : hour;
+      //   time(hour, minute, second);
+      // }
+
+      // function time(h, m, s) {
+      //   h = (360 / 12) * h + (360 / 12 / 60) * m + (360 / 12 / 60 / 60) * s;
+      //   m = (360 / 60) * m + (360 / 60 / 60) * s;
+      //   s *= 360 / 60;
+      //   let hour = document.getElementById("hour");
+      //   let minute = document.getElementById("minute");
+      //   let second = document.getElementById("second");
+      //   hour.style.transform = "rotate(" + h + "deg)";
+      //   minute.style.transform = "rotate(" + m + "deg)";
+      //   second.style.transform = "rotate(" + s + "deg)";
+      // }
+      // setInterval(function () {
+      //   clock();
+      // });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #ccc;
+        position: relative;
+        top: 100px;
+        left: 100px;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $(".left").click(function () {
+          $("div").css("left", "-=10px");
+          $("input").val($(this).text());
+        });
+        $(".right").click(function () {
+          $("div").css("left", "+=10px");
+          $("input").val($(this).text());
+        });
+        $(".top").click(function () {
+          $("div").css("top", "-=10px");
+          $("input").val($(this).text());
+        });
+        $(".bottom").click(function () {
+          $("div").css("top", "+=10px");
+          $("input").val($(this).text());
+        });
+        $(document).keyup(function (event) {
+          console.log(event.keyCode);
+          switch (event.keyCode) {
+            case 37:
+              $(".left").click();
+              break;
+            case 38:
+              $(".top").click();
+              break;
+            case 39:
+              $(".right").click();
+              break;
+            case 40:
+              $(".bottom").click();
+              break;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p><input type="text" /></p>
+    <button class="left">left</button>
+    <button class="right">right</button>
+    <button class="top">top</button>
+    <button class="bottom">bottom</button>
+    <div></div>
+  </body>
+</html>

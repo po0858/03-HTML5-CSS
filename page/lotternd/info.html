@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/info.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Better Food</a></li>
+        <li><a href="#">Better Life</a></li>
+      </ul>
+    </nav>
+    <section id="food" class="areas">
+      <div class="foodwrap">
+        <div class="title">
+          <p>
+            롯데중앙연구소의 노력 끝에 탄생한 Better Food를 소개합니다.<br />
+            개발부터 출시까지, 그 이면에 숨겨진 생생한 이야기를 만나보세요.
+          </p>
+        </div>
+        <div class="img_wrap">
+          <ul>
+            <li>
+              <a href="#"
+                ><div class="img_box">
+                  <img src="images/better-food1.jpg" alt="food" />
+                  <div class="img_hover">
+                    <div>
+                      <img src="images/link-arrow.png" alt="link-arrow" />
+                    </div>
+                  </div>
+                </div>
+                <p>클라우드 크러시(KRUSH)</p></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><div class="img_box">
+                  <img src="images/better-food2.jpg" alt="food" />
+                  <div class="img_hover">
+                    <div>
+                      <img src="images/link-arrow.png" alt="link-arrow" />
+                    </div>
+                  </div>
+                </div>
+                <p>Chefood 요리킥</p></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><div class="img_box">
+                  <img src="images/better-food3.jpg" alt="food" />
+                  <div class="img_hover">
+                    <div>
+                      <img src="images/link-arrow.png" alt="link-arrow" />
+                    </div>
+                  </div>
+                </div>
+                <p>오잉 노가리칩 청양마요맛</p></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="life" class="areas">
+      <div class="title">
+        <p>
+          최고의 R&D 역량으로 모두의 Better Life에 기여하겠습니다.<br />
+          롯데중앙연구소의 주요 연구 성과를 소개합니다.
+        </p>
+      </div>
+      <div class="decs_wrap">
+        <div class="decs">
+          <a href="#">
+            <p>온라인 수입식품 안전관리 RPA 시스템 구축</p>
+            <img src="images/lotteon-logo.jpg" alt="logo" />
+            <p>
+              최근 크게 성장하는 국내 이커머스 시장과 더불어 온라인 해외상품
+              직접 구매(직구)나 구매 대행 시장도 매년 성장하고 있습니다. 전체
+              해외 직구 상품 중 식품은 27%를 차지하고 있으며, 건강 기능 식품의
+              선호도가 가장 높은 것으로 나타났습니다. 해외 직구 건강 기능 식품
+              중에서는 국내 허가되지 않은 원료나 성분 등을 함유하여 부작용이
+              발생할 수 있는 위해 상품들도 많습니다. 해외 직구 상품은 정식
+              수입품과 달리 안전성 확인 절차나 원료 등의 표시사항이 미비하므로,
+              소비자 보호를 위해서는 온라인 플랫폼 사업자의 선제적이고 자발적인
+              상품 안전관리 활동이 필요합니다. 따라서 롯데 안전센터에서는 자사
+              온라인몰 롯데ON에서 판매하는 해외 직구 식품의 안전관리를 위하여
+              RPA 시스템을 도입하였습니다.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.querySelector("li").classList.add("nav_on");
+      document.querySelector(".areas").classList.add("areas_on");
+      let nav = document.querySelectorAll("li");
+      let areas = document.querySelectorAll(".areas");
+      nav[0].onclick = function () {
+        nav.forEach(function (keys, items) {
+          keys.classList.remove("nav_on");
+        });
+        areas.forEach(function (key, item) {
+          key.classList.remove("areas_on");
+        });
+        nav[0].classList.add("nav_on");
+        areas[0].classList.add("areas_on");
+      };
+      nav[1].onclick = function () {
+        nav.forEach(function (keys, items) {
+          keys.classList.remove("nav_on");
+        });
+        areas.forEach(function (key, item) {
+          key.classList.remove("areas_on");
+        });
+        nav[1].classList.add("nav_on");
+        areas[1].classList.add("areas_on");
+      };
+    </script>
+  </body>
+</html>

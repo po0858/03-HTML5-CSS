@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      section {
+        border-radius: 20px;
+        overflow: hidden;
+        width: 800px;
+        margin: 50px auto;
+      }
+      div {
+        width: 800px;
+        margin: 0 auto;
+      }
+      button {
+        width: 100%;
+        height: 67px;
+        background: #f3f5fb;
+        border: none;
+        font-size: 30px;
+        font-weight: 800;
+        color: #6c768e;
+        position: relative;
+        cursor: pointer;
+      }
+      button::after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        background: url(icon-80-dropdown.png) center/cover no-repeat;
+        right: 40px;
+        transform: rotate(0);
+      }
+      button.on::after {
+        transform: rotate(180deg);
+      }
+      .decs {
+        padding: 24px 32px;
+        border-bottom: 2px solid #f3f5fb;
+        box-sizing: border-box;
+      }
+      .decs:first-child {
+        border-top: 2px solid #d8dded;
+      }
+      .decs p,
+      .decs span {
+        font-size: 22px;
+        color: #555555;
+      }
+      .decs p {
+        font-weight: bold;
+      }
+      .decs li span:first-child {
+        font-weight: bold;
+      }
+      .decs ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .decs ul li {
+        width: 50%;
+      }
+      .decs li span {
+        display: inline-block;
+        word-spacing: -1px;
+        letter-spacing: -1.5px;
+        vertical-align: top;
+      }
+      .decs li span:last-child {
+        width: 70%;
+        word-break: keep-all;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div id="title"><button>어떻게 연구했나요?</button></div>
+      <div id="decswrap">
+        <div class="decs">
+          <span>
+            쥬니버스쿨을 꾸준히 사용한 만 3-6세 아동의 수학능력(수와 연산, 측정,
+            기하 영역)과 인지능력(처리속도, 언어이해, 시공간 영역)이 향상됨을
+            검증하였습니다.
+          </span>
+        </div>
+        <div class="decs">
+          <p>[논리]</p>
+          <ul>
+            <li><span>연구대상ㅣ</span><span>3-6세 아동 100명</span></li>
+            <li><span>연구기간ㅣ</span><span>4주</span></li>
+            <li>
+              <span>연구도구ㅣ</span><span>한국 웩슬러 유아지능검사도구</span>
+            </li>
+            <li>
+              <span>연구기관ㅣ</span
+              ><span>서울대 아동가족학과 박유정 교수 연구실</span>
+            </li>
+          </ul>
+        </div>
+        <div class="decs">
+          <p>[수학]</p>
+          <ul>
+            <li><span>연구대상ㅣ</span><span>3-6세 아동 98명</span></li>
+            <li><span>연구기간ㅣ</span><span>10주</span></li>
+            <li>
+              <span>연구도구ㅣ</span><span>유아 그림수학능력 검사도구</span>
+            </li>
+            <li>
+              <span>연구기관ㅣ</span
+              ><span>중앙대 유아교육과 조형숙 교수 연구실</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script>
+      let btn = document.querySelector("button");
+      document.querySelector("button").classList.add("on");
+      let bool = true;
+      document.getElementById("decswrap").style.display = "none";
+      btn.onclick = function () {
+        bool = !bool;
+        if (bool) {
+          document.getElementById("decswrap").style.display = "none";
+          document.querySelector("button").classList.add("on");
+        } else {
+          document.getElementById("decswrap").style.display = "block";
+          document.querySelector("button").classList.remove("on");
+        }
+      };
+    </script>
+  </body>
+</html>

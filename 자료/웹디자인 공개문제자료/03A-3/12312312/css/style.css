@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+}
+span,
+a,
+li {
+  font-size: inherit;
+  color: inherit;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+main {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+main > section {
+  display: flex;
+}
+.top {
+  width: 100%;
+  height: 100px;
+}
+.top > * {
+  height: 100%;
+}
+.top .logo img {
+  object-fit: contain;
+}
+nav {
+  flex-grow: 1;
+  position: relative;
+  text-align: center;
+}
+nav .menu-1depth {
+  position: absolute;
+  z-index: 1;
+  right: 30px;
+  top: 30px;
+  display: flex;
+}
+nav .menu-1depth > li {
+  position: relative;
+  width: 150px;
+}
+nav .menu-1depth > li > a {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  border: 1px solid #000;
+}
+nav .menu-1depth > li:not(:first-child) > a {
+  border-left: none;
+}
+nav .menu-1depth > li:hover > a {
+  background: #000;
+  color: #fff;
+}
+nav .menu-2depth {
+  width: 100%;
+  display: none;
+  border: 1px solid #000;
+  border-top: none;
+}
+nav .menu-2depth > li {
+  height: 40px;
+  background: #fff;
+}
+nav .menu-2depth > li:hover {
+  background: #000;
+  color: #fff;
+}
+nav .menu-2depth > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+}
+.logo {
+  width: 200px;
+}
+.slide {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+.slide > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.slide > div:first-child {
+  opacity: 1;
+}
+.slide > div img {
+  object-fit: cover;
+  object-position: bottom;
+}
+.con {
+  width: 100%;
+  height: 200px;
+}
+.con > div {
+  width: 400px;
+}
+.tab {
+  position: relative;
+}
+.tab .button {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+  left: 0;
+  top: 1px;
+  z-index: 1;
+}
+.tab button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background: #ccc;
+  border: 1px solid #000;
+}
+.tab button:first-child {
+  border-right: none;
+}
+.tab .conbox {
+  position: relative;
+}
+.tab .conbox > div {
+  position: absolute;
+  width: 100%;
+}
+.tab button.on {
+  background: #fff;
+  border-bottom: none;
+}
+.tab .c1 {
+  display: none;
+  height: 150px;
+  background: #fff;
+  border: 1px solid #000;
+}
+.tab .c1.on {
+  display: block;
+}
+.tab .c1 table {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.tab .c1 table a:hover {
+  text-decoration: underline;
+}
+.tab .c2 {
+  display: none;
+  height: 150px;
+  background: #fff;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #000;
+}
+.tab .c2.on {
+  display: flex;
+}
+.tab .c2 img {
+  width: 80px;
+  height: 80px;
+}
+.c3 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.c3 img {
+  width: 100px;
+  height: auto;
+}
+.c4 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.c4 img {
+  width: 100px;
+  height: auto;
+}
+.popup {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000;
+}
+.popup.on {
+  display: block;
+}
+.popup .wrap {
+  padding: 50px;
+  background: #fff;
+}
+.popup .text h2 {
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+.popup .close {
+  width: 100%;
+  height: 20px;
+  margin-top: 20px;
+}
+.popup .close button {
+  float: right;
+  padding: 0px 10px;
+}
+.bottom {
+  width: 100%;
+  height: 100px;
+  align-items: center;
+}
+.bottom .text {
+  width: 1000px;
+  text-align: center;
+  opacity: 0.8;
+}

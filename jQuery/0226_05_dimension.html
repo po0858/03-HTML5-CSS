@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        padding: 30px;
+        margin: 30px;
+        border: 10px solid;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        //let a = $("div").width();
+        // let a = $("div").height("500");
+        // let a = $("div").innerWidth();
+        // let a = $("div").outerWidth();
+        // let a = $("div").outerWidth(true);
+        // console.log(a);
+        $("div").click(function () {
+          console.log(this.tagName);
+          $("p").html(`${this.tagName} 가로크기는 : ${$(this).width()}<br/>
+            ${$(this).prop("tagName")} 세로크기는 : ${$(this).height()}<br/>
+            div태그의 패딩 포함 가로크기는 : ${$(this).innerWidth()}<br/>
+            div태그의 패딩 포함 세로크기는 : ${$(this).innerHeight()}<br/>
+            div태그의 패딩 테두리 포함 가로크기는 : ${$(this).outerWidth()}<br/>
+            div태그의 패딩 테두리 포함 세로크기는 : ${$(
+              this
+            ).outerHeight()}<br/>
+            div태그의 패딩 테두리 마진포함 가로크기는 : ${$(this).outerWidth(
+              true
+            )}<br/>
+            div태그의 패딩 테두리 마진포함 세로크기는 : ${$(this).outerHeight(
+              true
+            )}<br/>`);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <p></p>
+  </body>
+</html>

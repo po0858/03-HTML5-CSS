@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      body > div:first-child {
+        height: 100px;
+      }
+      body > div:nth-child(2) {
+        height: 300px;
+      }
+      body > div:nth-child(3) {
+        height: 200px;
+      }
+      body > div:nth-child(4) {
+        height: 100px;
+      }
+      .logo {
+        background: #aaa;
+        flex: 1;
+      }
+      .menu {
+        flex: 5;
+        background: #bbb;
+      }
+      .slide {
+        flex: 1;
+        background: #ccc;
+      }
+      .notice {
+        flex: 1;
+        background: #ddd;
+      }
+      .gallery {
+        flex: 1;
+        background: #eee;
+      }
+      .banner {
+        flex: 1;
+        background: #ddd;
+      }
+      .ft_logo {
+        flex: 1;
+        background: #f0f0f0;
+      }
+      .copyright {
+        flex: 4;
+        background: #ccc;
+      }
+      .sns {
+        flex: 1;
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <div class="logo"><a>logo</a></div>
+      <div class="menu">menu</div>
+    </div>
+    <div class="flex">
+      <div class="slide">slide</div>
+    </div>
+    <div class="flex">
+      <div class="notice">공지사항</div>
+      <div class="gallery">갤러리</div>
+      <div class="banner">바로가기</div>
+    </div>
+    <div class="flex">
+      <div class="ft_logo">logo</div>
+      <div class="copyright">copyright</div>
+      <div class="sns">sns</div>
+    </div>
+  </body>
+</html>

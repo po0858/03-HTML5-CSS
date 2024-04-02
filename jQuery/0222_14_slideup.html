@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+      }
+      div div p {
+        width: 300px;
+        height: 300px;
+        background: url(../javascript/images//photo1.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      div:has(span) {
+        margin-top: 80px;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("#slideUp").click(function () {
+          $("div div").slideUp(1000, "linear");
+        });
+        $("#slideDown").click(function () {
+          $("div div").slideDown(1000, "linear");
+        });
+        $("#slideToggle").click(function () {
+          $("div div").slideToggle(1000, "linear");
+        });
+        $("span").eq(0).siblings().css("display", "none");
+        $("a").click(function () {
+          let i = $(this).index();
+          console.log(i);
+          $("a").css("color", "#000");
+          $(this).css("color", "red");
+          $("span").css("display", "none");
+          $("span").eq(i).css("display", "block");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <div>
+        <p></p>
+      </div>
+    </div>
+    <button id="slideUp">slideUp</button>
+    <button id="slideDown">slideDown</button>
+    <button id="slideToggle">slideToggle</button>
+    <div>
+      <a href="#">링크1</a>
+      <a href="#">링크2</a>
+      <a href="#">링크3</a>
+      <a href="#">링크4</a>
+      <a href="#">링크5</a>
+    </div>
+    <div>
+      <span>링크1하단입니다</span>
+      <span>링크2하단입니다</span>
+      <span>링크3하단입니다</span>
+      <span>링크4하단입니다</span>
+      <span>링크5하단입니다</span>
+    </div>
+  </body>
+</html>

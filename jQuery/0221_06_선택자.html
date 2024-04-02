@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        // $("#demo").css("font-size", "50px").css("color", "red");
+        $("#demo").css({
+          fontSize: "50px",
+          color: "red",
+          backgroundColor: "yellow",
+        });
+        $("p").text("javascript");
+        $("p:last").text("");
+        $("p:not(:empty)").text("제이쿼리");
+        $("p:not(:first)").text("not first 제이쿼리");
+        $(":header").css("color", "red");
+        // $(":focus").css("background", "red");
+        $("input").focus(function () {
+          $(":focus").css("background", "red");
+        });
+        $(":contains('제이쿼리')").css("border", "solid 1px");
+      });
+    </script>
+  </head>
+  <body>
+    <p id="demo">자바스크립트 & 제이쿼리</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <h1>제목태그</h1>
+    <h2>제목태그</h2>
+    <h3>제목태그</h3>
+    <h4>제목태그</h4>
+    <input type="text" /><br />
+    <input type="text" /><br />
+    <input type="text" /><br />
+  </body>
+</html>

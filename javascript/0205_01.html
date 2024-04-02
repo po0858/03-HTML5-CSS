@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+      }
+      .btn p {
+        text-align: center;
+        line-height: 50px;
+        flex-grow: 1;
+      }
+      .btn p:first-child {
+        background: red;
+      }
+      .btn p:nth-child(2) {
+        background: blue;
+      }
+      .btn p:nth-child(3) {
+        background: green;
+      }
+      .btn p:last-child {
+        background: yellow;
+      }
+      .con {
+        position: relative;
+      }
+      .btn p.on {
+        color: #fff;
+      }
+      .con li {
+        position: absolute;
+        display: none;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 300px;
+      }
+      .con li.on {
+        display: block;
+      }
+      .con li:first-child {
+        background: red;
+      }
+      .con li:nth-child(2) {
+        background: blue;
+      }
+      .con li:nth-child(3) {
+        background: green;
+      }
+      .con li:last-child {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn">
+      <p>하나</p>
+      <p>둘</p>
+      <p>셋</p>
+      <p>넷</p>
+    </div>
+    <ul class="con">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <script>
+      document.querySelector(".con li").classList.add("on");
+      let btn = document.querySelectorAll(".btn p");
+      let con = document.querySelectorAll(".con li");
+      function rstbtn() {
+        btn.forEach(function (o, i) {
+          o.classList.remove("on");
+        });
+      }
+      btn.forEach(function (o, i) {
+        o.onclick = function () {
+          //   console.log(i);
+          // console.log(o);
+          rstbtn();
+          con.forEach(function (keys, item) {
+            // console.log(keys);
+            keys.classList.remove("on");
+          });
+
+          con[i].classList.add("on");
+          btn[i].classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>

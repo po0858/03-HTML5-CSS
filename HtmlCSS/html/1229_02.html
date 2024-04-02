@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 420px;
+      }
+      section {
+        width: 420px;
+        height: 590px;
+      }
+      ul {
+        margin: 0 auto;
+        height: 785px;
+        width: calc(420px + 420px + 40px);
+      }
+      li:nth-of-type(1) section {
+        background: url(../images/novita/service-img-dclean.png);
+        border-radius: 500px 500px 250px 0;
+      }
+      li:nth-of-type(2) section {
+        background: url(../images/novita/service-img-install.png);
+        border-radius: 250px 0 500px 500px;
+      }
+      li {
+        float: left;
+        list-style: none;
+      }
+      li:nth-of-type(2) {
+        margin-left: 40px;
+        margin-top: 100px;
+      }
+      a::after {
+        display: inline-block;
+        content: "";
+        width: 13px;
+        height: 13px;
+        background: url(../images/novita/ico-sprites.svg) -124px -150px;
+        margin-left: 10px;
+      }
+      p {
+        margin-bottom: 40px;
+        margin-top: 20px;
+        font-weight: lighter;
+        opacity: 0.7;
+      }
+      a {
+        font-weight: bold;
+        text-decoration: none;
+      }
+      h2 {
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div>
+          <section></section>
+          <h2>비데 종합 전문 관리 서비스</h2>
+          <p>
+            Dr. Clean 서비스는 서비스 전문 기술자가 직접 제품을 <br />유지보수
+            해주는 종합관리 서비스입니다.
+          </p>
+          <a href="#">Dr. Clean 서비스 바로가기</a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <section></section>
+          <h2>우리 집 문 앞까지 찾아오는 비데</h2>
+          <p>
+            노비타는 예약만 하시면 원하시는 날짜, 시간에 맞춰 <br />설치서비스를
+            받으실 수 있습니다.
+          </p>
+          <a href="#">설치 서비스 바로가기</a>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

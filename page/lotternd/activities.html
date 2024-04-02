@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/activities.css" />
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">연구개발 </a></li>
+        <li><a href="#">기초연구 </a></li>
+        <li><a href="#">패키지연구 </a></li>
+        <li><a href="#">기술연구 </a></li>
+        <li><a href="#">안전관리 </a></li>
+        <li><a href="#">연구전략 </a></li>
+      </ul>
+    </nav>
+    <section>
+      <div class="areas">
+        <img src="images/research-ban1.jpg" alt="ban" />
+        <div class="decs">
+          <p>연구개발</p>
+          <p>
+            소비자의 니즈와 시장 선호도에 부합하는 신제품을 출시하고 품질을
+            개선합니다.
+          </p>
+        </div>
+      </div>
+      <div class="areas">
+        <img src="images/research-ban2.jpg" alt="ban" />
+        <div class="decs">
+          <p>기초연구</p>
+          <p>
+            바이오 연구, 신소재 발굴 등 개발의 기틀을 마련하고 신규 솔루션을
+            개척합니다.
+          </p>
+        </div>
+      </div>
+      <div class="areas">
+        <img src="images/research-ban3.jpg" alt="ban" />
+        <div class="decs">
+          <p>패키지연구</p>
+          <p>
+            제품 포장을 설계하고 디자인하여 품질 유지와 아이덴티티 강화를
+            이룹니다.
+          </p>
+        </div>
+      </div>
+      <div class="areas">
+        <img src="images/research-ban4.jpg" alt="ban" />
+        <div class="decs">
+          <p>기술연구</p>
+          <p>첨단 기술을 현장에 적용하여 식품 제조 방식의 선진화를 이끕니다.</p>
+        </div>
+      </div>
+      <div class="areas">
+        <img src="images/research-ban5.jpg" alt="ban" />
+        <div class="decs">
+          <p>안전관리</p>
+          <p>
+            위생 관리와 위해 사고 예방을 통해 롯데 식품 및 상품의 안전을
+            책임집니다.
+          </p>
+        </div>
+      </div>
+      <div class="areas">
+        <img src="images/research-ban6.jpg" alt="ban" />
+        <div class="decs">
+          <p>연구전략</p>
+          <p>진행 방향을 설계하고 실질적 연구 활동을 지원합니다.</p>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.querySelector("li").classList.add("nav_on");
+      document.querySelector(".areas").classList.add("areas_on");
+      let nav = document.querySelectorAll("li");
+      let areas = document.querySelectorAll(".areas");
+      nav.forEach(function (keys, items) {
+        keys.onclick = function () {
+          nav.forEach(function (keys, items) {
+            keys.classList.remove("nav_on");
+          });
+          areas.forEach(function (key, item) {
+            key.classList.remove("areas_on");
+          });
+          nav[items].classList.add("nav_on");
+          areas[items].classList.add("areas_on");
+        };
+      });
+    </script>
+  </body>
+</html>

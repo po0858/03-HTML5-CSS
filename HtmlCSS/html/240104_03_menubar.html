@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 500px;
+        height: 300px;
+      }
+      input {
+        display: none;
+      }
+      label {
+        display: block;
+        float: left;
+        line-height: 50px;
+        width: calc(500px / 6);
+        background: #9cc;
+      }
+      div {
+        width: 500px;
+      }
+      .menu {
+        text-align: center;
+        height: 50px;
+      }
+      #one:checked ~ p {
+        background: url(../images/photo1.jpg) center/ cover;
+      }
+      #two:checked ~ p {
+        background: url(../images/photo2.jpg) center/ cover;
+      }
+      #three:checked ~ p {
+        background: url(../images/photo3.jpg) center/ cover;
+      }
+      #four:checked ~ p {
+        background: url(../images/photo4.jpg) center/ cover;
+      }
+      #five:checked ~ p {
+        background: url(../images/photo5.jpg) center/ cover;
+      }
+      #six:checked ~ p {
+        background: url(../images/photo6.jpg) center/ cover;
+      }
+      label:hover {
+        cursor: pointer;
+        background: #669;
+      }
+      #one:checked ~ div label:first-of-type,
+      #two:checked ~ div label:nth-of-type(2),
+      #three:checked ~ div label:nth-of-type(3),
+      #four:checked ~ div label:nth-of-type(4),
+      #five:checked ~ div label:nth-of-type(5),
+      #six:checked ~ div label:nth-of-type(6) {
+        background: #699;
+      }
+      section img:hover {
+        content: url(../images/menu1_over.jpg);
+      }
+      article {
+        width: 115px;
+        height: 94px;
+        background: url(../images/menu1.jpg);
+      }
+      article:hover {
+        background: url(../images/menu1_over.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="radio" name="photo" id="one" checked />
+      <input type="radio" name="photo" id="two" />
+      <input type="radio" name="photo" id="three" />
+      <input type="radio" name="photo" id="four" />
+      <input type="radio" name="photo" id="five" />
+      <input type="radio" name="photo" id="six" />
+      <p></p>
+      <div class="menu">
+        <label for="one">photo1</label>
+        <label for="two">photo2</label>
+        <label for="three">photo3</label>
+        <label for="four">photo4</label>
+        <label for="five">photo5</label>
+        <label for="six">photo6</label>
+      </div>
+    </div>
+    <section><img src="../images/menu1.jpg" alt="menu1" /></section>
+    <article></article>
+  </body>
+</html>

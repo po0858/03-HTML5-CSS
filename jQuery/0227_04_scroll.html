@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      .boxwrap {
+        display: table;
+        table-layout: fixed;
+        width: 300%;
+        height: 100vh;
+      }
+      section {
+        display: table-cell;
+      }
+      section:first-child {
+        background: #f00;
+      }
+      section:nth-child(2) {
+        background: #f0f;
+      }
+      section:nth-child(3) {
+        background: #00f;
+      }
+      .page {
+        position: fixed;
+        width: 100px;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+      .page li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #fff;
+      }
+      .page li.on {
+        background: #000;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let cont = $("section");
+        $(".page li").eq(0).addClass("on");
+        $(".page li").click(function () {
+          let i = $(this).index();
+          let moveTop = $(cont).eq(i).offset().left;
+          $("html,body")
+            .stop()
+            .animate({ scrollLeft: moveTop + "px" }, 500);
+          $(".page li").removeClass("on");
+          $(this).addClass("on");
+        });
+        $(cont).each(function (index, value) {
+          $(this).on("wheel", function () {
+            // console.log(event.wheelDelta);
+            let moveTop = $(window).scrollLeft;
+            let contIndex = $(cont).eq(index);
+            if (event.wheelDelta < 0) {
+              try {
+                $("ul li").removeClass("on");
+                moveTop = $(contIndex).next().offset().left;
+                console.log(moveTop);
+                $("ul li")
+                  .eq(contIndex.index() + 1)
+                  .addClass("on");
+              } catch (err) {
+                // $("ul li").removeClass("on");
+                moveTop = $(contIndex).offset().left;
+                $("ul li").eq(contIndex.index()).addClass("on");
+              }
+            } else {
+              try {
+                $("ul li").removeClass("on");
+                moveTop = $(contIndex).prev().offset().left;
+                $("ul li")
+                  .eq(contIndex.index() - 1)
+                  .addClass("on");
+              } catch (err) {
+                moveTop = $(contIndex).offset().left;
+                $("ul li").eq(contIndex.index()).addClass("on");
+              }
+            }
+            $("html,body")
+              .stop()
+              .animate({ scrollLeft: moveTop + "px" }, 500);
+            console.log(contIndex.index());
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="boxwrap">
+      <section></section>
+      <section></section>
+      <section></section>
+    </div>
+    <ul class="page">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </body>
+</html>

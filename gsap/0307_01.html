@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="gsap.min.js"></script>
+  </head>
+  <body>
+    <svg><circle cx="50" cy="50" r="50" fill="red"></circle></svg>
+    <script>
+      //   gsap.to("svg circle", { fill: "blue" });
+      let obj = { myNum: 10, myColor: "red" };
+
+      gsap.to(obj, {
+        myNum: 200,
+        myColor: "blue",
+        onUpdate: () => {
+          console.log(obj.myNum, obj.myColor);
+          document
+            .querySelector("svg > circle")
+            .setAttribute("fill", obj.myColor);
+        },
+      });
+    </script>
+  </body>
+</html>

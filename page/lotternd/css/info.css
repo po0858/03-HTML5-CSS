@@ -1,0 +1,192 @@
+@charset "uft-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  width: 100%;
+  padding: 80px 0;
+}
+nav ul {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+nav ul li {
+  width: 230px;
+  height: 54px;
+  border-radius: 27px;
+  background: rgba(51, 51, 51, 0.8);
+  text-align: center;
+  cursor: pointer;
+}
+nav ul li a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 54px;
+}
+nav ul li.nav_on {
+  background: #da291c;
+}
+nav ul li.nav_on a {
+  color: #fff;
+}
+section {
+  width: 100%;
+  display: none;
+}
+section.areas_on {
+  display: block;
+}
+section p {
+  text-align: center;
+}
+section > div {
+  width: 100%;
+  position: relative;
+}
+section .title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+section .title p {
+  font-size: 40px;
+  color: #da291c;
+}
+#food {
+  width: 100%;
+}
+.foodwrap {
+  width: 1400px;
+  margin: 0 auto;
+}
+.foodwrap .img_wrap ul {
+  display: flex;
+}
+.foodwrap .img_wrap ul li {
+  width: 430px;
+  height: 430px;
+  padding: 0 25px 50px;
+}
+.foodwrap .img_box {
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.foodwrap .img_box img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+.foodwrap .img_box:hover .img_hover {
+  opacity: 1;
+  transition: all 0.4s;
+}
+.foodwrap .img_wrap .img_hover {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(218, 41, 28, 0.9);
+  transition: all 0.4s;
+}
+.foodwrap .img_wrap .img_hover > div {
+  width: 53px;
+  height: 53px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+}
+.foodwrap .img_wrap .img_hover img {
+  width: 31px;
+  height: 17px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.foodwrap .img_wrap p {
+  color: #111;
+  font-size: 18px;
+  padding: 15px 0 15px;
+}
+#life .decs_wrap {
+  background: url(../images/better-life1.jpg);
+  width: 100%;
+  height: 670px;
+}
+#life .decs {
+  width: 80%;
+  height: 490px;
+  padding: 48px 20px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#life .decs a {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#life .decs p:first-of-type {
+  font-size: 34px;
+  font-weight: 900;
+  color: #222;
+}
+#life .decs img {
+  margin: 40px 0;
+}
+#life .decs p:last-of-type {
+  font-size: 20px;
+  font-weight: 300;
+  color: #555;
+}
+#life .decs p:last-of-type::before {
+  content: "";
+  background: url(../images/big-arrow-left.png);
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 31px;
+  height: 61px;
+}
+#life .decs p:last-of-type::after {
+  content: "";
+  background: url(../images/big-arrow-right.png);
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 31px;
+  height: 61px;
+}

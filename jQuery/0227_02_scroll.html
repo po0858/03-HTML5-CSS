@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overflow: hidden;
+      }
+      section {
+        height: 100vh;
+      }
+      section:first-child {
+        background: #f00;
+      }
+      section:nth-child(2) {
+        background: #f0f;
+      }
+      section:nth-child(3) {
+        background: #00f;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let cont = $("section");
+        $(cont).each(function (index, value) {
+          //   console.log(index, value);
+          $(this).on("wheel", function () {
+            // console.log(event.wheelDelta);
+            let moveTop = $(window).scrollTop;
+            let contIndex = $(cont).eq(index);
+            if (event.wheelDelta < 0) {
+              if ($(contIndex).next() != undefined) {
+                try {
+                  moveTop = $(contIndex).next().offset().top;
+                } catch (err) {}
+              }
+            } else {
+              if ($(contIndex).prev() != undefined) {
+                try {
+                  moveTop = $(contIndex).prev().offset().top;
+                } catch (err) {}
+              }
+            }
+            $("html,body")
+              .stop()
+              .animate({ scrollTop: moveTop + "px" }, 500);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section></section>
+    <section></section>
+    <section></section>
+  </body>
+</html>

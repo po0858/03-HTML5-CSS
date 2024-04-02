@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="gsap.min.js"></script>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+      .green {
+        background: green;
+      }
+      .purple {
+        background: purple;
+      }
+      .orange {
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box green" data-color="#0ae448" id="green"></div>
+    <div class="box purple" data-color="#9d95ff" id="purple"></div>
+    <div class="box orange" data-color="#ff8709" id="orange"></div>
+    <script>
+      let tl = gsap.timeline({
+        defaults: { x: 600, duration: 1 },
+      });
+
+      // start at exactly 1 second into the timeline (absolute)
+      tl.to(".green", {}, 1);
+
+      // insert at the start of the previous animation
+      tl.to(".purple", {}, "<");
+
+      // insert 1 second after the end of the timeline (a gap)
+      tl.to(".orange", {}, "+=1");
+    </script>
+  </body>
+</html>

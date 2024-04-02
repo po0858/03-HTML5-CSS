@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+      }
+      .btn p {
+        text-align: center;
+        line-height: 50px;
+        flex-grow: 1;
+      }
+
+      .con {
+        position: relative;
+      }
+      .btn p.on {
+        color: #fff;
+      }
+      .con li {
+        position: absolute;
+        text-align: center;
+        line-height: 300px;
+        /* display: none; */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s;
+      }
+      .con li.on {
+        height: 300px;
+      }
+      .con li:first-child,
+      .btn p:first-child {
+        background: red;
+      }
+      .con li:nth-child(2),
+      .btn p:nth-child(2) {
+        background: blue;
+      }
+      .con li:nth-child(3),
+      .btn p:nth-child(3) {
+        background: green;
+      }
+      .con li:last-child,
+      .btn p:last-child {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn">
+      <p>하나</p>
+      <p>둘</p>
+      <p>셋</p>
+      <p>넷</p>
+    </div>
+    <ul class="con">
+      <li>하나</li>
+      <li>둘</li>
+      <li>셋</li>
+      <li>넷</li>
+    </ul>
+    <script>
+      document.querySelector(".con li").classList.add("on");
+      let btn = document.querySelectorAll(".btn p");
+      let con = document.querySelectorAll(".con li");
+      function rstbtn() {
+        btn.forEach(function (o, i) {
+          o.classList.remove("on");
+        });
+      }
+      btn.forEach(function (o, i) {
+        // o.onmouseenter = function () {
+        o.addEventListener("mouseenter", function () {
+          rstbtn();
+          con.forEach(function (keys, item) {
+            keys.classList.remove("on");
+          });
+
+          con[i].classList.add("on");
+          btn[i].classList.add("on");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: block;
+      }
+      .clearfix::after {
+        clear: both;
+      } */
+      ul {
+        list-style: none;
+      }
+      body {
+        padding: 500px 0;
+      }
+      .mid {
+        width: 100%;
+        min-width: 1280px;
+        margin: 0 auto;
+        padding: 120px 0;
+        background: url(../images/mid_bg_img1.jpg) center/cover fixed;
+        filter: brightness(80%);
+      }
+      div.desc {
+        width: 1280px;
+        margin: 0 auto;
+        font-size: 50px;
+        color: #fff;
+        text-align: center;
+        line-height: 70px;
+      }
+      div.info {
+        width: 1280px;
+        margin: 0 auto;
+        color: #fff;
+      }
+      div.info ul {
+        width: 1080px;
+        height: 200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      div.info ul li {
+        position: relative;
+        float: left;
+        width: 25%;
+        height: 100%;
+      }
+      div.info ul li .col {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+      div.info ul li .col::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 80px;
+        background: #fff;
+        right: 0;
+        top: 30px;
+      }
+      div.info ul li:last-child .col::after {
+        width: 0;
+      }
+      div.info ul li .col .title {
+        position: relative;
+        line-height: 50px;
+        margin: 0 auto 20px;
+        width: 150px;
+        height: 50px;
+      }
+      .title .line {
+        position: absolute;
+        background: #fff;
+      }
+      .line-top {
+        width: 100%;
+        height: 1px;
+        left: 0;
+        top: 0;
+        transform: scaleX(0);
+        transform-origin: 50% 0;
+        transition: all 0.5s ease-in-out;
+      }
+      ul li:hover .line-top {
+        transform: scaleX(1);
+        transition: all 0.5s ease-in-out;
+      }
+      .line-right {
+        width: 1px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        transform: scaleY(0);
+        transform-origin: 0 50%;
+        transition: all 0.5s ease-in-out;
+      }
+      ul li:hover .line-right {
+        transform: scaleY(1);
+        transition: all 0.5s ease-in-out;
+      }
+      .line-bottom {
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: 0px;
+        transform: scaleX(0);
+        transform-origin: 50% 0;
+        transition: all 0.5s ease-in-out;
+      }
+      ul li:hover .line-bottom {
+        transform: scaleX(1);
+        transition: all 0.5s ease-in-out;
+      }
+      .line-left {
+        width: 1px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transform: scaleY(0);
+        transform-origin: 0 50%;
+        transition: all 0.5s ease-in-out;
+      }
+      ul li:hover .line-left {
+        transform: scaleY(1);
+        transition: all 0.5s ease-in-out;
+      }
+      .bot .desc {
+        color: #000;
+      }
+      .bot .desc p {
+        font-size: 16px;
+      }
+      .pr1,
+      .pr2 {
+        width: 340px;
+        height: 550px;
+        color: #fff;
+        word-spacing: -2px;
+        position: relative;
+        float: left;
+        margin-bottom: 500px;
+        /*  */
+      }
+      .bot > ul {
+        height: 550px;
+      }
+      .pr1 img,
+      .pr2 img {
+        position: absolute;
+        z-index: -1;
+      }
+      .pr1 h2,
+      .pr2 h2 {
+        padding-top: 300px;
+        padding-left: 20px;
+        font-size: 50px;
+        margin-bottom: 30px;
+      }
+      .pr1 p,
+      .pr2 p {
+        padding-left: 20px;
+      }
+      .pr2 {
+        margin-top: 50px;
+      }
+      .pr3 li p {
+      }
+      .pr3 li {
+        width: 220px;
+        height: 120px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mid">
+      <div class="desc">
+        <p>
+          개개인의 특성과 능력을 중시하는 극동건설은 여러분의
+          <strong>성장의 터</strong>를 마련합니다.
+        </p>
+      </div>
+      <div class="info">
+        <ul>
+          <li>
+            <div class="col">
+              <div class="title">
+                <h2>인재상</h2>
+                <span class="line line-top"></span>
+                <span class="line line-right"></span>
+                <span class="line line-bottom"></span>
+                <span class="line line-left"></span>
+              </div>
+              <p class="desc">
+                극동건설이 추구하는 인재상을<br />
+                여러분께 소개합니다
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="col">
+              <div class="title">
+                <h2>인사제도</h2>
+                <span class="line line-top"></span>
+                <span class="line line-right"></span>
+                <span class="line line-bottom"></span>
+                <span class="line line-left"></span>
+              </div>
+              <p class="desc">
+                임직원의 역량향상과 동기부여를<br />
+                위해 다양한 제도를 운영합니다
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="col">
+              <div class="title">
+                <h2>채용안내</h2>
+                <span class="line line-top"></span>
+                <span class="line line-right"></span>
+                <span class="line line-bottom"></span>
+                <span class="line line-left"></span>
+              </div>
+              <p class="desc">
+                극동건설의 채용제도 및 절차를<br />
+                자세히 소개합니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="col">
+              <div class="title">
+                <h2>채용공고</h2>
+                <span class="line line-top"></span>
+                <span class="line line-right"></span>
+                <span class="line line-bottom"></span>
+                <span class="line line-left"></span>
+              </div>
+              <p class="desc">
+                극동건설의 채용공고를<br />
+                소개합니다
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="bot">
+      <div class="desc">
+        <h2>PR Center</h2>
+        <p>
+          세상에 없던 신기술을 개척하는 기업,극동건설이 기술의 진보를 선도합니다
+        </p>
+      </div>
+      <ul>
+        <li>
+          <div class="pr1 clearfix">
+            <img src="../images/pr_img1.jpg" alt="" />
+            <h2>극동뉴스</h2>
+            <p>
+              극동건설의 다양한 소식을 가장 빠르게<br />
+              전달해드립니다.
+            </p>
+          </div>
+          <div class="pr2 clearfix">
+            <img src="../images/pr_img2.jpg" alt="" />
+            <h2>R&D</h2>
+            <p>
+              끊임없는 신기술 개발과 혁신으로<br />
+              극동건설이 건축기술의 진보를 위해<br />
+              노력하고 있습니다
+            </p>
+          </div>
+        </li>
+        <li>
+          <ul class="pr3">
+            <li>
+              <p>
+                언론속의<br />
+                극동
+              </p>
+              <p>
+                언론에 소개되는 극동의 소식을<br />
+                안내해드립니다.
+              </p>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

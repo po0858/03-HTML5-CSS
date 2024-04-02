@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: Geometos;
+        src: url(webfont/Geometos.ttf) format("ttf");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #000;
+        font-family: Geometos, NotoSansKR, sans-serif;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      nav,
+      .navbg {
+        width: 100%;
+        background: #fff;
+      }
+      nav {
+        border-bottom: 1px solid #ddd;
+        box-sizing: border-box;
+      }
+      nav .wrap {
+        max-width: 1360px;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+      }
+      nav .wrap > a:first-child {
+        display: flex;
+        align-items: center;
+        width: 189px;
+        height: 90px;
+      }
+      nav .wrap > a:first-child img {
+        width: 100%;
+      }
+      nav .wrap > ul {
+        display: flex;
+      }
+      nav .wrap > ul > li {
+        position: relative;
+      }
+      nav .wrap > ul > li:hover > a {
+        color: #780997;
+      }
+      nav .wrap > ul > li > a {
+        line-height: 90px;
+        padding: 0 32px;
+        font-size: 20px;
+        color: #333;
+        font-weight: 700;
+      }
+      nav .wrap > ul > li:hover ul::after,
+      nav .wrap > ul > li ul:hover:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -32px;
+        z-index: 1;
+        width: 100%;
+        height: 3px;
+        background: #780997;
+        border-radius: 3px;
+        animation: ani 0.3s forwards;
+      }
+      @keyframes ani {
+        0% {
+          transform: scale(0);
+          transform-origin: 50%;
+        }
+        100% {
+          transform: scale(1);
+          transform-origin: 50%;
+        }
+      }
+      nav .wrap ul ul {
+        margin-top: 30px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 90px;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 1;
+        display: none;
+      }
+      nav .wrap ul ul.on {
+        display: block;
+      }
+      nav .wrap ul ul li {
+        text-align: center;
+        line-height: 28px;
+      }
+      nav .wrap ul ul li:hover a {
+        color: #780997;
+      }
+      nav .wrap ul ul a {
+        color: #666;
+        font-weight: bold;
+        word-spacing: -1px;
+        letter-spacing: -1px;
+      }
+      nav .wrap > a:last-child {
+        width: 140px;
+        height: 49px;
+        padding: 0 20px;
+        background: #780997;
+        border-radius: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: #fff;
+        font-weight: 700;
+        transition: all 0.5s;
+      }
+      nav .wrap > a:last-child:hover {
+        background: #000;
+      }
+      .navbg {
+        height: 432px;
+        opacity: 0;
+        transition: 0.2s;
+      }
+      .navbg.on {
+        opacity: 1;
+      }
+      .navbg .wrap {
+        max-width: 1380px;
+        margin: 0 auto;
+      }
+      .navbg img {
+        width: 275px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="wrap">
+        <a href="#">
+          <img src="images/30927906_WlZv8LI0_20240131062633.png" alt="logo" />
+        </a>
+        <ul>
+          <li>
+            <a href="#">BRAND</a>
+            <ul>
+              <li><a href="#">더벤티 소개</a></li>
+              <li><a href="#">더벤티 연혁</a></li>
+              <li><a href="#">BI 소개</a></li>
+              <li><a href="#">찾아오시는 길</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">MENU</a>
+            <ul>
+              <li><a href="#">더벤티 커피이야기</a></li>
+              <li><a href="#">신메뉴</a></li>
+              <li><a href="#">전체메뉴</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">STORE</a>
+            <ul>
+              <li><a href="#">매장찾기</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">MEMBERSHIP</a>
+            <ul>
+              <li><a href="#">더벤티 APP소개</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">COMMUNITY</a>
+            <ul>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">보도자료</a></li>
+              <li><a href="#">이벤트</a></li>
+              <li><a href="#">칭찬매장</a></li>
+              <li><a href="#">더벤티 이야기</a></li>
+              <li><a href="#">SNS</a></li>
+              <li><a href="#">자주하는 질문</a></li>
+              <li><a href="#">벤티럭 사연접수</a></li>
+              <li><a href="#">THEVENGERS 봉사활동</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a href="#"
+          ><p>프랜차이즈</p>
+          <img src="images/logo-icon.png" alt="icon"
+        /></a>
+      </div>
+    </nav>
+    <div class="navbg">
+      <div class="wrap">
+        <img src="images/30927906_0t3KRPFD_20231205054335.jpg" alt="berry" />
+      </div>
+    </div>
+    <script>
+      let menu = document.querySelectorAll("nav .wrap>ul>li");
+      let submenu = document.querySelectorAll("nav .wrap>ul ul");
+      let sub = document.querySelector(".navbg");
+      menu.forEach(function (o, i) {
+        o.onmouseenter = function () {
+          sub.classList.add("on");
+          submenu.forEach(function (o, i) {
+            o.classList.add("on");
+          });
+        };
+        sub.onmouseleave = function () {
+          sub.classList.remove("on");
+          submenu.forEach(function (o, i) {
+            o.classList.remove("on");
+          });
+        };
+      });
+    </script>
+  </body>
+</html>

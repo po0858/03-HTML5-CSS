@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.inner {
+  width: 100%;
+  max-width: 1700px;
+  height: 669px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.inner > div {
+  flex: 0 1 32%;
+  position: relative;
+  border-radius: 16px;
+}
+.inner > div img {
+  width: 100%;
+}
+.inner .title {
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  padding: 2px 2px 16px 16px;
+  background: #fff;
+  border-radius: 0 0 0 36px;
+}
+.inner .title::before,
+.inner .title::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M0 2c8.8 0 16 7.2 16 16h2V0H0v2z' fill='%23fff' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: 100%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.inner .title::before {
+  left: -16px;
+  top: 0;
+}
+.inner .title::after {
+  right: -0px;
+  bottom: -16px;
+}
+
+.inner .name {
+  display: inline-block;
+  width: 272px;
+  height: 58px;
+  margin: 2px 2px;
+  line-height: 58px;
+  font-size: 17px;
+  color: #000;
+  text-align: center;
+  border-radius: 29px;
+  letter-spacing: -0.5px;
+}
+.inner > div.box.esg,
+.inner > div:first-child span.name {
+  background: #89dcff;
+}
+.inner > div.box.green {
+  background: #03502b;
+}
+.inner > div.box.policy {
+  background: #333;
+}
+.inner > div:nth-child(2) span.name {
+  background: #1ed47e;
+}
+.inner > div:nth-child(3) span.name {
+  background: #fae100;
+}
+.inner .boximg {
+  position: absolute;
+  top: 164px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.inner .boximg:not(.esg) {
+  width: 60%;
+}
+.inner .txt {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  font-size: 26px;
+  letter-spacing: -0.6px;
+  line-height: 1.46;
+  max-width: 340px;
+  word-break: keep-all;
+}
+.inner .box:not(.esg) .txt {
+  color: #fff;
+}
+.inner .btn {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  padding: 16px 0 0 16px;
+  background: #fff;
+  border-radius: 36px 0 0 0;
+}
+.inner .btn::before,
+.inner .btn::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M0 2c8.8 0 16 7.2 16 16h2V0H0v2z' fill='%23fff' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: 100% auto;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+}
+.inner .btn::before {
+  left: -16px;
+  bottom: 0;
+}
+.inner .btn::after {
+  right: 0;
+  top: -16px;
+}
+.inner .btn:hover svg circle {
+  fill: #333;
+}

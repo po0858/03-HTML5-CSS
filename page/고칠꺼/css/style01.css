@@ -1,0 +1,32 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+div.wrap:nth-child(2) {
+  display: none;
+}
+.wrap {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.wrap h1 {
+  font-size: 40px;
+  color: #da291c;
+  padding: 0 150px;
+  margin-top: 100px;
+}
