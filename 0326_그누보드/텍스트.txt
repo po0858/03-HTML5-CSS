@@ -1,0 +1,15 @@
+<? 
+$G5_PATH="./gnuboard5";
+include_once($G5_PATH.'/common.php');
+include_once($G5_PATH.'/head.sub.php');
+include_once($G5_PATH.'/lib/outlogin.lib.php');
+?>
+
+
+<link rel="stylesheet" href="/gnuboard5/skin/outlogin/basic/style.css">
+<link rel="stylesheet" href="/gnuboard5/skin/member/basic/style.css">
+<script src="/gnuboard5/js/jquery-1.12.4.min.js"></script>
+<script src="/gnuboard5/js/common.js"></script>
+
+
+<? echo outlogin("basic"); ?>
